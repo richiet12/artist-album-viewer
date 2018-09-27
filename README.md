@@ -1,5 +1,8 @@
 # Artist Album Viewer README
 
+## Brief
+Construct a user interface that disaplys all albums by a given artist
+
 ## Setup
 Please ensure npm v5.7.1 and node v7.7.1 are installed
 then in the root run
