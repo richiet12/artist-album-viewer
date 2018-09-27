@@ -1,10 +1,20 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
+import styled from 'styled-components';
 import { fetchAlbums } from '../actions/fetchAlbums';
 import { PINK_FLOYD_ID } from '../config/graphbrainz';
 import AlbumCard from '../components/albumCard';
 import ErrorMsg from '../components/errorMsg';
+import { FONTSIZE_LARGE } from '../styles/vars';
+
+const Title = styled.h1`
+	font-size: ${FONTSIZE_LARGE};
+	margin-bottom: 60px;
+	text-align: center;
+	text-decoration: underline;
+`;
+Title.displayName = 'Title';
 
 export const AlbumList = class App extends Component {
 	componentDidMount() {
@@ -33,7 +43,7 @@ export const AlbumList = class App extends Component {
 
 		return (
 			<div>
-				<h1>All Albums by {artistName}</h1>
+				<Title>{artistName} Albums</Title>
 
 				{albums.map(album => (
 					<AlbumCard

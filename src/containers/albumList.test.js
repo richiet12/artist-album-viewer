@@ -38,7 +38,7 @@ describe('Album list', () => {
 			wrapper = shallow(<AlbumList album={loadingState} fetchAlbums={mockFetchAlbumsfn} />);
 			hasLoadingText = wrapper.contains('loading...');
 			hasErrorComponent = wrapper.find('ErrorMsg').length === 1;
-			artistNameHeading = wrapper.find('h1').length === 1;
+			artistNameHeading = wrapper.find('Title').length === 1;
 			countOfAlbumCards = wrapper.find('AlbumCard').length;
 		});
 
@@ -64,7 +64,7 @@ describe('Album list', () => {
 			wrapper = shallow(<AlbumList album={errorState} fetchAlbums={mockFetchAlbumsfn} />);
 			hasLoadingText = wrapper.contains('loading...');
 			hasErrorComponent = wrapper.find('ErrorMsg').length === 1;
-			artistNameHeading = wrapper.find('h1').length === 1;
+			artistNameHeading = wrapper.find('Title').length === 1;
 			countOfAlbumCards = wrapper.find('AlbumCard').length;
 		});
 
@@ -90,7 +90,7 @@ describe('Album list', () => {
 			wrapper = shallow(<AlbumList album={successState} fetchAlbums={mockFetchAlbumsfn} />);
 			hasLoadingText = wrapper.contains('loading...');
 			hasErrorComponent = wrapper.find('ErrorMsg').length === 1;
-			artistNameHeading = wrapper.find('h1').length === 1;
+			artistNameHeading = wrapper.find('Title').length === 1;
 			countOfAlbumCards = wrapper.find('AlbumCard').length;
 		});
 

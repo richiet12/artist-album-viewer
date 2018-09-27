@@ -18,9 +18,8 @@ describe('Image', () => {
 		});
 
 		it('renders img', () => {
-			const errorMessage =
-				<img src="image.jpg" alt="alt Text" />;
-			expect(wrapper.contains(errorMessage)).toEqual(true);
+			const imgElement = 'Img';
+			expect(wrapper.find(imgElement).length).toBe(1);
 		});
 	});
 });
