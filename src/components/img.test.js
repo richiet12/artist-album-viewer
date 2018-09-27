@@ -18,6 +18,7 @@ describe('Image', () => {
 		});
 
 		it('renders img', () => {
+			// todo improve this test to check src and alt attributes are present
 			const imgElement = 'Img';
 			expect(wrapper.find(imgElement).length).toBe(1);
 		});

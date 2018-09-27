@@ -31,3 +31,4 @@ The thread suggests installing watchman which resolved the issue for me.
 - A no javascript version of the site is not required.
 - Accessibility is important. I have ensured that the app has a 100% rating in the Chrome accessibility audit.
 - Styling the ui is not a priority for this task. With more time I would like to improve the visual appearence.
+- GraphBrain does not offer a way to get smaller renditions of the album artwork

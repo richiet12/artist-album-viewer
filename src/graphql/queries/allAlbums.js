@@ -1,7 +1,7 @@
 export const operationName = 'AllAlbums';
 
 // note: would like to order releaseGroups by firstReleaseDate
-// but graphbrain does not support this
+// but graphbrain does not support ordering
 
 export const query = `
 query ${operationName}($artistId:MBID!) {
