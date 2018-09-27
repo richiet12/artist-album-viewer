@@ -6,24 +6,24 @@ import { PINK_FLOYD_ID } from '../config/graphbrainz';
 import AlbumCard from '../components/albumCard';
 import ErrorMsg from '../components/errorMsg';
 
-const Query = class App extends Component {
+export const AlbumList = class App extends Component {
 	componentDidMount() {
 		this.props.fetchAlbums({ id: PINK_FLOYD_ID });
 	}
 
 	render() {
-		const isFetchInProgress = this.props.store.get('fetching');
+		const isFetchInProgress = this.props.album.get('fetching');
+		const isError = this.props.album.get('error');
+		const albumData = this.props.album.get('data');
 		let artistName = '';
 		let albums = [];
-		const isError = this.props.store.get('error');
-		const albumData = this.props.store.get('data');
 
 		if (isError) {
-			return <ErrorMsg msg={this.props.store.get('errorMsg')} />;
+			return <ErrorMsg msg={this.props.album.get('errorMsg')} />;
 		}
 
 		if (isFetchInProgress) {
-			return <p>loading</p>;
+			return <p>loading...</p>;
 		}
 
 		if (albumData.get('releaseGroups')) {
@@ -48,12 +48,12 @@ const Query = class App extends Component {
 	}
 };
 
-function mapStateToProps(state) {
-	return { store: state };
+function mapStateToProps(album) {
+	return { album };
 }
 
 function mapDispathcToProps(dispatch) {
 	return bindActionCreators({ fetchAlbums }, dispatch);
 }
 
-export default connect(mapStateToProps, mapDispathcToProps)(Query);
+export default connect(mapStateToProps, mapDispathcToProps)(AlbumList);

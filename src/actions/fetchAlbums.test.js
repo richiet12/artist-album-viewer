@@ -2,7 +2,7 @@ import configureMockStore from 'redux-mock-store';
 import thunk from 'redux-thunk';
 import { FETCH_ALBUMS_REQUEST, FETCH_ALBUMS_FAILURE, FETCH_ALBUMS_SUCCESS, fetchAlbums } from '../actions/fetchAlbums';
 import { PINK_FLOYD_ID } from '../config/graphbrainz';
-import pinkFloydTestData from './pinkFloydTestData';
+import pinkFloydTestData from '../config/pinkFloydTestData';
 
 const middlewares = [thunk];
 const mockStore = configureMockStore(middlewares);
