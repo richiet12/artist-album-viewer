@@ -31,7 +31,7 @@ describe('fetch albums async actions', () => {
 		});
 	});
 
-	it('creates FETCH_ALBUMS_REQUEST and FETCH_ALBUMS_FAILURE when fetching images has been done with a broken search tag', () => {
+	it('creates FETCH_ALBUMS_REQUEST and FETCH_ALBUMS_FAILURE when fetching albums has been done with a broken artist id', () => {
 		const expectedAction = [
 			{
 				payload: {},
