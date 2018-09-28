@@ -4,9 +4,10 @@ import Img from '../components/img';
 import MissingImg from '../components/missingImg';
 import { FONTSIZE_MEDIUM, COLOUR_PRIMARY } from '../styles/vars';
 
-const Card = styled.div`
+const Card = styled.li`
 	border-bottom: 1px solid ${COLOUR_PRIMARY};
 	margin: 40px auto 0;
+	list-style: none;
 	padding-bottom: 20px;
 	text-align:center;
 	width: 100%;

@@ -44,15 +44,16 @@ export const AlbumList = class App extends Component {
 		return (
 			<div>
 				<Title>{artistName} Albums</Title>
-
-				{albums.map(album => (
-					<AlbumCard
-						title={album.node.title}
-						firstReleaseDate={album.node.firstReleaseDate}
-						img={album.node.coverArtArchive.front}
-						key={album.node.id}
-					/>
-				))}
+				<ul>
+					{albums.map(album => (
+						<AlbumCard
+							title={album.node.title}
+							firstReleaseDate={album.node.firstReleaseDate}
+							img={album.node.coverArtArchive.front}
+							key={album.node.id}
+						/>
+					))}
+				</ul>
 			</div>
 		);
 	}
